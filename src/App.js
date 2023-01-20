@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Parent from './ComporonteCC1/Parent';
+import Recherche from './ComporonteCC1/Recherche';
+import Afficher from './ComporonteCC1/Afficher';
+import Ajouter from './ComporonteCC1/Ajouter';
+import { Routes,Route} from 'react-router-dom';
+import Munu from './Rotore/Munu';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+  <div  >
+      <>
+      <Munu/>
+      <div className='todo-app'>
+  <Parent>
+  
+    <Routes>
+    <Route path='/Afficher' element={ <Afficher/>} /> 
+    <Route path='/Recherche' element={ <Recherche/>} />
+    <Route path='/Ajouter' element={<Ajouter/>} /> 
+        
+    </Routes>
+ </Parent>
+ </div >
+ </>
+  </div>
+   
+      );
 }
 
 export default App;
+
